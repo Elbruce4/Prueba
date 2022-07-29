@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import { 
+  DivHome,
+  StyledLogo,
+  DivHeader,
+  Modelos,
+  FirstPartHeader,
+  Menu } from './styles/Home';
 import './App.css';
+import logo from "./assets/svg/Logo.svg"
+import MenuIcon from "./assets/png/Group.png"
 
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DivHome>
+      <DivHeader>
+        <FirstPartHeader>
+          <StyledLogo>
+            <img src={logo} alt="logo" />
+          </StyledLogo>
+          <Modelos>
+            Modelos
+          </Modelos>
+          <Modelos>
+            Ficha de modelo
+          </Modelos>
+        </FirstPartHeader>
+        <Menu>
+          Menu
+          <img src={MenuIcon} alt="menu" />
+        </Menu>
+      </DivHeader>
+    </DivHome>
   );
 }
 
-export default App;
+export default Home;
