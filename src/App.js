@@ -1,8 +1,12 @@
 import Header from "./components/HeaderHome";
+import TitleAndFilter from "./components/TitleAndFilter";
 
 function Home() {
   return (
-    <Header></Header>
+    <div>
+      <Header></Header>
+      <TitleAndFilter></TitleAndFilter>
+    </div>
   );
 }
 
