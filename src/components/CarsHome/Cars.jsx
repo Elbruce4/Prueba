@@ -1,5 +1,7 @@
 import { useState , useEffect } from "react";
 import GetAllCars from "../../api/GetAllCars";
+import DetailCars from "./DetailCars";
+import { Div } from "../../styles/Cars";
 
 const Cars = () => {
 
@@ -17,11 +19,22 @@ const Cars = () => {
     },[data])
 
     return (
-        <div>
+        <Div>
             {
-                data != null ? data.name : "aloha"
+                data !== [] ? 
+                data.map(obj => {
+                    return <DetailCars
+                        key={obj.id}
+                        name={obj.name}
+                        price={obj.price}
+                        year={obj.year}
+                        photo={obj.thumbnail}
+                    />
+                })
+                : 
+                "aloha"
             }
-        </div>
+        </Div>
     );
 }
 
