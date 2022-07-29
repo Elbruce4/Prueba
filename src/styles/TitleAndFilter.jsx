@@ -42,6 +42,8 @@ export const Filter = styled.p`
     color: #373737;    
     font-size: 14px;
     :hover{
-
+        background-color: #F7F7F7;
+        border-radius: 1rem;
+        
     }
 `
