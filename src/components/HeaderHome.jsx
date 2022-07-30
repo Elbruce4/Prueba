@@ -6,11 +6,15 @@ import {
     Menu,
     ModelosSelected,
     DivModels,
-    PModel } from '../styles/HeaderHome';
+    PModel} from '../styles/HeaderHome';
   import logo from "../assets/svg/Logo.svg"
   import MenuIcon from "../assets/png/Group.png"
+  import { useState } from 'react';
+  import NavBar from './NavBar';
   
   function Header({isHome}) {
+
+    const [showNav , setShowNav] = useState(false);
 
     return (
         <DivHeader>
@@ -41,10 +45,22 @@ import {
               }
             
           </FirstPartHeader>
-          <Menu>
-            <PModel>Menu</PModel>
-            <img src={MenuIcon} alt="menu" />
-          </Menu>
+          
+            
+            {
+              showNav ?
+                <NavBar 
+                  toggle = {setShowNav}
+                  show = {showNav}
+                />
+              :
+              <Menu>
+                <PModel>Menu</PModel>
+                <img src={MenuIcon} alt="menu" onClick={() => {
+                  console.log("va");
+                  setShowNav(!showNav)}} />
+              </Menu>
+            }
         </DivHeader>
     );
   }

@@ -18,6 +18,7 @@ export const FirstPartHeader = styled.div`
     align-items: center;
 `
 export const Menu = styled.div`
+    z-index: 2;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -58,10 +59,15 @@ export const PModel = styled.p`
 `
 
 export const DivModels = styled.div`
-    /* margin-left: 10rem;
-    position: absolute; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 15rem;
+`
+
+export const NavBarSize = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 60rem;
 `
