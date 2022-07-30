@@ -16,10 +16,6 @@ const Cars = () => {
         data();
     }, []);
 
-    useEffect(() => {
-        console.log(data)
-    },[data])
-
     return (
         <Div>
             {
