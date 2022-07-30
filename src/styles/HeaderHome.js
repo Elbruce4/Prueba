@@ -39,8 +39,17 @@ export const StyledLogo = styled.div`
 export const Modelos = styled.div`
     color: black;
     padding-bottom: 1.2rem;
-    :hover{
-        border-bottom: 0.25rem red solid;
-        color: red;
-    }
+`
+
+export const ModelosSelected = styled.div`
+    padding-bottom: 1.2rem;
+    border-bottom: 0.25rem red solid;
+    color: red;
+`
+
+export const DivModels = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15rem;
 `

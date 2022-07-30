@@ -1,15 +1,16 @@
-import Header from "./components/HeaderHome";
-import TitleAndFilter from "./components/TitleAndFilter";
-import Cars from "./components/CarsHome/Cars";
+import Home from "./components/Home";
+import { Routes , Route } from "react-router-dom";
+import Model from "./components/Model";
 
-function Home() {
+function App() {
   return (
     <div>
-      <Header></Header>
-      <TitleAndFilter></TitleAndFilter>
-      <Cars></Cars>
+      <Routes>
+        <Route path="/" exact element={<Home/>}/>
+        <Route path="/:modelId" element={<Model/>}/>
+      </Routes>
     </div>
   );
 }
 
-export default Home;
+export default App;

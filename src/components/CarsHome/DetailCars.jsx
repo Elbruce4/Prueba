@@ -3,21 +3,20 @@ import {
     EachCarDetail,
     DivPriceAndYear,
     PPriceAndYear,
-    Name } from "../../styles/Cars";
+    Name,
+    Button } from "../../styles/Cars";
 import { useState } from "react";
+import {Link} from "react-router-dom"
 
-const DetailCars = ({name , price , year , photo , show}) => {
+const DetailCars = ({name , price , year , photo , show , id}) => {
 
     const [buttonOn , setButtonOn] = useState(show);
 
-
-    console.log("show:" , show);
     return (
         <EachCarDetail 
             onMouseLeave={() => {setButtonOn(!buttonOn)}}
-            onMouseEnter={() => {setButtonOn(!buttonOn)}}
-        >
-            <Name>{name}</Name>
+            onMouseEnter={() => {setButtonOn(!buttonOn)}}>
+            <Name selectColor={buttonOn}>{name.length > 5 ? name.slice(0,5) : name}</Name>
             <DivPriceAndYear>
                 <PPriceAndYear>{year}</PPriceAndYear>
                 <PPriceAndYear>|</PPriceAndYear>
@@ -28,7 +27,11 @@ const DetailCars = ({name , price , year , photo , show}) => {
             </Image>
             {
                 buttonOn ?
-                <button>Ver modelo</button>
+                <Button>
+                <Link to={`/${id}`} >
+                    Ver Modelo
+                </Link>
+                </Button>
                 :
                 undefined
             }

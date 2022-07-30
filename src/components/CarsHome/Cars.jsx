@@ -2,6 +2,7 @@ import { useState , useEffect } from "react";
 import GetAllCars from "../../api/GetAllCars";
 import DetailCars from "./DetailCars";
 import { Div } from "../../styles/Cars";
+import loading from "../../assets/gif/loading.gif";
 
 const Cars = () => {
 
@@ -26,6 +27,7 @@ const Cars = () => {
                 data.map(obj => {
                         return <DetailCars
                            key={obj.id}
+                           id={obj.id}
                            name={obj.name}
                            price={obj.price}
                            year={obj.year}
@@ -34,7 +36,9 @@ const Cars = () => {
                        />
                 })
                 : 
-                "aloha"
+                <div>
+                    <img src={loading} alt="loading..." />
+                </div>
             }
         </Div>
     );
