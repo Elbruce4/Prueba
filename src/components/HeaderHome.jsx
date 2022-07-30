@@ -5,13 +5,12 @@ import {
     FirstPartHeader,
     Menu,
     ModelosSelected,
-    DivModels } from '../styles/HeaderHome';
+    DivModels,
+    PModel } from '../styles/HeaderHome';
   import logo from "../assets/svg/Logo.svg"
   import MenuIcon from "../assets/png/Group.png"
   
   function Header({isHome}) {
-
-    console.log(isHome);
 
     return (
         <DivHeader>
@@ -22,33 +21,28 @@ import {
             
               { isHome ?
                 <DivModels>
-                  <ModelosSelected>
-                    Modelos
+                  <ModelosSelected size={isHome}>
+                    <PModel>Modelos</PModel>
                   </ModelosSelected>
                   <Modelos>
-                    Ficha del Modelo
+                    <PModel>Ficha de modelos</PModel>
                   </Modelos>
                 </DivModels>
                 :
                 <DivModels>
-                  <Modelos>
-                    Modelos
+                  <Modelos >
+                    <PModel>Modelos</PModel>
                   </Modelos>
-                  <ModelosSelected>
-                    Ficha del Modelo
+                  <ModelosSelected size={isHome}>
+                    <PModel>Ficha de modelos</PModel>
                   </ModelosSelected>
                 </DivModels>
               
-              /* <Modelos>
-                Modelos
-              </Modelos>
-              <Modelos>
-                Ficha de modelo
-              </Modelos> */}
+              }
             
           </FirstPartHeader>
           <Menu>
-            Menu
+            <PModel>Menu</PModel>
             <img src={MenuIcon} alt="menu" />
           </Menu>
         </DivHeader>

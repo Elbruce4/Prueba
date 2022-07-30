@@ -11,7 +11,10 @@ import {
     DetailDivImg,
     Detail,
     DetailSize,
-    H4
+    H4,
+    H5,
+    H2,
+    P
 } from "../styles/Model";
 import Img1 from "../assets/png/Bitmap.png"
 import Img2 from "../assets/png/Bitmap2.png"
@@ -39,9 +42,9 @@ const Model = () => {
             <DivTitle>
                 <img src={data.photo} alt="img" />
                 <RigthSizeTitle>
-                    <h5>`{data.name} {data.segment}`</h5>
-                    <h2>{data.title}</h2>
-                    <p>{data.description}</p>
+                    <H5>{data.name} {data.segment}</H5>
+                    <H2>{data.title}</H2>
+                    <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita alias repudiandae nobis aperiam esse porro pariatur placeat voluptatum quos!</P>
                 </RigthSizeTitle>
             </DivTitle>
             <DivImg>
@@ -68,16 +71,16 @@ const Model = () => {
             </DivImg>
             <Detail>
                 <DetailSize>
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam velit aperiam, rerum dolores quidem numquam nam repellat quas sint veniam?</p>
+                    <H2>Title</H2>
+                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam velit aperiam, rerum dolores quidem numquam nam repellat quas sint veniam?</P>
                 </DetailSize>
                 <img src={Img1} alt="img" />
             </Detail>
             <Detail>
                 <img src={Img2} alt="img" />
                 <DetailSize>
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam velit aperiam, rerum dolores quidem numquam nam repellat quas sint veniam?</p>
+                    <H2>Title</H2>
+                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam velit aperiam, rerum dolores quidem numquam nam repellat quas sint veniam?</P>
                 </DetailSize>
             </Detail>
             <Footer></Footer>

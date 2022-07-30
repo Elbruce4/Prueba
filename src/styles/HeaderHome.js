@@ -6,8 +6,8 @@ export const DivHeader = styled.div`
     flex-direction: row;
     justify-content: space-between;
     margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 `
 export const FirstPartHeader = styled.div`
     width: 25rem;
@@ -31,8 +31,8 @@ export const Menu = styled.div`
 
 export const StyledLogo = styled.div`
   img {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 `
 
@@ -42,12 +42,24 @@ export const Modelos = styled.div`
 `
 
 export const ModelosSelected = styled.div`
-    padding-bottom: 1.2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: ${({size}) => size ? "6rem" : "9rem"};
+    padding-bottom: 0.8rem;
     border-bottom: 0.25rem red solid;
-    color: red;
+    color: #EB0A1E;
+`
+
+export const PModel = styled.p`
+    font-family: 'Montserrat', sans-serif;
+    font-size: .80rem;
+    font-weight: bold;
 `
 
 export const DivModels = styled.div`
+    /* margin-left: 10rem;
+    position: absolute; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;

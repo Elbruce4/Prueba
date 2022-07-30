@@ -75,3 +75,24 @@ export const H4 = styled.h4`
 
     color: #373737;
 `
+
+export const H5 = styled.h5`
+    font-family: 'Montserrat', sans-serif;
+    //font-weight: 700;
+    font-weight: bold;
+    color: #373737;
+    margin-bottom: 0;
+`
+
+export const H2 = styled.h2`
+    margin-top: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #373737;
+    font-size: 2rem;
+`
+
+export const P = styled.p`
+    text-align: start;
+    color: #373737;
+    font-family: 'Montserrat', sans-serif;
+`

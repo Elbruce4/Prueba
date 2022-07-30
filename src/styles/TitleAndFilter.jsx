@@ -12,6 +12,7 @@ export const Title = styled.h2`
     color: #373737;
     font-weight: 700px;
     font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
 `
 
 export const DivFilters = styled.div`
@@ -36,9 +37,11 @@ export const Order = styled.div`
 export const IntroFilter = styled.p`
     color: black;
     font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
 `
 
 export const Filter = styled.p`
+    font-family: 'Montserrat', sans-serif;
     color: #373737;    
     font-size: 14px;
     :hover{

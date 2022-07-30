@@ -37,9 +37,11 @@ export const DivPriceAndYear = styled.div`
 export const PPriceAndYear = styled.p`
     margin: 0;
     font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
 `
 
 export const Name = styled.h3`
+    font-family: 'Montserrat', sans-serif;
     color: ${({selectColor}) => selectColor ? "red" : "black"};
     margin-left: 4rem;
     margin-bottom: 0.5rem;
