@@ -5,6 +5,12 @@ export const Div = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin: 2rem 12rem;
+    @media (max-width: 414px) {
+        flex-direction: column;
+        margin-left: 5rem;
+        margin-top:0;
+        margin-bottom: 0;
+    }
 `
 
 
@@ -23,6 +29,11 @@ export const EachCarDetail = styled.div`
     padding: 0;
     width: 13rem;
     height: 16rem;
+    @media (max-width: 414px) {
+        margin-top:0;
+        margin-bottom: 0;
+    }
+    
 `
 
 export const DivPriceAndYear = styled.div`

@@ -8,6 +8,12 @@ export const DivHeader = styled.div`
     margin-top: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
+
+    @media (max-width: 414px) {
+        max-width: 390px;
+        justify-content: space-evenly;
+    }
+
 `
 export const FirstPartHeader = styled.div`
     width: 25rem;
@@ -16,6 +22,12 @@ export const FirstPartHeader = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+    @media (max-width: 414px) {
+        max-width: 390px;
+        justify-content: space-evenly;
+        margin: 0;
+    }
 `
 export const Menu = styled.div`
     z-index: 2;
@@ -35,6 +47,10 @@ export const StyledLogo = styled.div`
     width: 2.5rem;
     height: 2.5rem;
   }
+  @media (max-width: 414px) {
+        
+        margin-right: 15rem;
+    }
 `
 
 export const Modelos = styled.div`
@@ -63,6 +79,11 @@ export const DivModels = styled.div`
     flex-direction: row;
     justify-content: space-between;
     width: 15rem;
+
+    @media (max-width: 414px) {
+        display: none;
+    }
+    
 `
 
 export const NavBarSize = styled.div`

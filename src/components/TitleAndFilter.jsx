@@ -22,9 +22,9 @@ const TitleAndFilter = () => {
                     <Filter>SUVs y crossover</Filter>
                 </Filters>
                 <Order>
-                    <Filter>
+                    <IntroFilter>
                         Ordernar por
-                    </Filter>
+                    </IntroFilter>
                 </Order>
             </DivFilters>
         </Div>

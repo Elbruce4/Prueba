@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const DivNav = styled.div`
-    position: absolute;
+    position: fixed;
     margin-left: 56rem;
     z-index: 5;
     width: 25rem;
-    height: 50rem;
+    height: 37rem;
     background-color: white;
     border-left: grey solid 0.5px;
     border-top: grey solid 0.5px;
+    border-bottom: grey solid 0.5px;
 `
 
 export const HeaderNav = styled.div`

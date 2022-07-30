@@ -5,6 +5,8 @@ export const Div = styled.div`
     flex-direction: column;
     justify-content: start;
     align-items: center;
+
+
 `
 
 export const Title = styled.h2`
@@ -13,6 +15,12 @@ export const Title = styled.h2`
     font-weight: 700px;
     font-size: 50px;
     font-family: 'Montserrat', sans-serif;
+
+    @media (max-width: 414px) {
+        font-size: 35px;
+        margin-right: 1rem;
+        margin-left: 1.5rem;
+    }
 `
 
 export const DivFilters = styled.div`
@@ -21,6 +29,10 @@ export const DivFilters = styled.div`
     justify-content: space-between;
     width: 60rem;
     border-bottom: 0.05rem outset gray;
+    @media (max-width: 414px) {
+        width: 380px;
+        justify-content: start;
+    }
 `
 export const Filters = styled.div`
     display: flex;
@@ -28,6 +40,12 @@ export const Filters = styled.div`
     justify-content: space-between;
     width: 40rem;
     margin-right: 20rem;
+    @media (max-width: 414px) {
+        margin-right: 1rem;
+        width: 200px;
+        margin-left: 2rem;
+    }
+   
 `
 
 export const Order = styled.div`
@@ -47,6 +65,8 @@ export const Filter = styled.p`
     :hover{
         background-color: #F7F7F7;
         border-radius: 1rem;
-        
+    }
+    @media (max-width: 414px) {
+        display: none;
     }
 `
