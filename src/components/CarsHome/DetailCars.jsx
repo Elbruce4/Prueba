@@ -4,10 +4,19 @@ import {
     DivPriceAndYear,
     PPriceAndYear,
     Name } from "../../styles/Cars";
+import { useState } from "react";
 
-const DetailCars = ({name , price , year , photo}) => {
+const DetailCars = ({name , price , year , photo , show}) => {
+
+    const [buttonOn , setButtonOn] = useState(show);
+
+
+    console.log("show:" , show);
     return (
-        <EachCarDetail>
+        <EachCarDetail 
+            onMouseLeave={() => {setButtonOn(!buttonOn)}}
+            onMouseEnter={() => {setButtonOn(!buttonOn)}}
+        >
             <Name>{name}</Name>
             <DivPriceAndYear>
                 <PPriceAndYear>{year}</PPriceAndYear>
@@ -17,6 +26,12 @@ const DetailCars = ({name , price , year , photo}) => {
             <Image>
                 <img src={photo} alt="car" />
             </Image>
+            {
+                buttonOn ?
+                <button>Ver modelo</button>
+                :
+                undefined
+            }
         </EachCarDetail>
     );
 }

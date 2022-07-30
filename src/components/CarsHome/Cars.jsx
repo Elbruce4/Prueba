@@ -6,6 +6,7 @@ import { Div } from "../../styles/Cars";
 const Cars = () => {
 
     const [data , setData] = useState([]);
+    let show = false;
 
     useEffect(() => {
         async function data() {
@@ -23,13 +24,14 @@ const Cars = () => {
             {
                 data !== [] ? 
                 data.map(obj => {
-                    return <DetailCars
-                        key={obj.id}
-                        name={obj.name}
-                        price={obj.price}
-                        year={obj.year}
-                        photo={obj.thumbnail}
-                    />
+                        return <DetailCars
+                           key={obj.id}
+                           name={obj.name}
+                           price={obj.price}
+                           year={obj.year}
+                           photo={obj.thumbnail}
+                           show = {show}
+                       />
                 })
                 : 
                 "aloha"

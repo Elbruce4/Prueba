@@ -22,6 +22,7 @@ export const EachCarDetail = styled.div`
     margin: 1rem 1rem;
     padding: 0;
     width: 13rem;
+    height: 16rem;
 `
 
 export const DivPriceAndYear = styled.div`
