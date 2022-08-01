@@ -14,8 +14,10 @@ const DetailCars = ({name , price , year , photo , show , id}) => {
 
     return (
         <EachCarDetail 
-            onMouseLeave={() => {setButtonOn(!buttonOn)}}
-            onMouseEnter={() => {setButtonOn(!buttonOn)}}>
+            onMouseLeave={() => {
+                console.log("entra");
+                setButtonOn(false)}}
+            onMouseEnter={() => {setButtonOn(true)}}>
             <Name selectColor={buttonOn}>{name.length > 5 ? name.slice(0,5) : name}</Name>
             <DivPriceAndYear>
                 <PPriceAndYear>{year}</PPriceAndYear>

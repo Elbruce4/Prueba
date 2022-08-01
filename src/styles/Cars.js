@@ -7,9 +7,9 @@ export const Div = styled.div`
     margin: 2rem 12rem;
     @media (max-width: 414px) {
         flex-direction: column;
+        margin-right: 3rem;
         margin-left: 5rem;
-        margin-top:0;
-        margin-bottom: 0;
+        padding-left: 1rem;
     }
 `
 export const DivBox = styled.div`
