@@ -22,6 +22,8 @@ import Img2 from "../assets/png/Bitmap2.png"
 const Model = () => {
 
     var isHome = false;
+    let width = window.screen.width;
+    console.log(width);
     const [data , setData] = useState({});
     let { modelId } = useParams();
 
@@ -69,13 +71,27 @@ const Model = () => {
                     }) : undefined
                 }
             </DivImg>
-            <Detail>
-                <DetailSize>
-                    <H2>Title</H2>
-                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam velit aperiam, rerum dolores quidem numquam nam repellat quas sint veniam?</P>
-                </DetailSize>
-                <img src={Img1} alt="img" />
-            </Detail>
+            
+                {
+                    width > 415 ?
+                    <Detail>
+                        <DetailSize>
+                            <H2>Title</H2>
+                            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam velit aperiam, rerum dolores quidem numquam nam repellat quas sint veniam?</P>
+                        </DetailSize>
+                        <img src={Img1} alt="img" />
+                    </Detail>
+                    :
+                    <Detail>
+                        <img src={Img1} alt="img" />
+                        <DetailSize>
+                            <H2>Title</H2>
+                            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam velit aperiam, rerum dolores quidem numquam nam repellat quas sint veniam?</P>
+                        </DetailSize>
+                    </Detail>
+                    
+                    
+                }
             <Detail>
                 <img src={Img2} alt="img" />
                 <DetailSize>

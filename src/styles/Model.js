@@ -16,6 +16,15 @@ export const DivTitle = styled.div`
         width: 30rem;
         height: 30rem;
     }
+    @media (max-width: 414px) {
+        flex-direction: column;
+        width: 414px;
+        margin: 0.5rem 1rem;
+        img{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
 `
 export const RigthSizeTitle = styled.div`
     display: flex;
@@ -23,6 +32,10 @@ export const RigthSizeTitle = styled.div`
     justify-content: start;
     margin: 8rem 5rem;
     width: 35rem;
+    @media (max-width: 414px) {
+        width: 340px;
+        margin: 1rem 1rem;
+    }
 `
 
 export const DivImg = styled.div`
@@ -31,6 +44,9 @@ export const DivImg = styled.div`
     margin-left: 12rem;
     width: 60rem;
     justify-content: space-around;
+    @media (max-width: 414px) {
+        display: none;
+    }
 `
 
 export const DetailDivImg = styled.div`
@@ -54,6 +70,11 @@ export const Detail = styled.div`
         width: 25;
         height: 15rem;
     }
+    @media (max-width: 414px) {
+        flex-direction: column;
+        width: 340px;
+        margin: 1rem 1rem;
+    }
 `
 
 export const DetailSize = styled.div`
@@ -61,6 +82,9 @@ export const DetailSize = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: 0rem 5rem;
+    @media (max-width: 414px) {
+        margin: 0 1rem;
+    }
 `
 
 export const H4 = styled.h4`
@@ -89,6 +113,9 @@ export const H2 = styled.h2`
     font-family: 'Montserrat', sans-serif;
     color: #373737;
     font-size: 2rem;
+    @media (max-width: 414px) {
+        margin-bottom: 0.5rem;
+    }
 `
 
 export const P = styled.p`

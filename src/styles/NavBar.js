@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DivNav = styled.div`
-    position: fixed;
+    position: absolute;
     margin-left: 56rem;
     z-index: 5;
     width: 25rem;

@@ -12,7 +12,9 @@ export const Div = styled.div`
         margin-bottom: 0;
     }
 `
-
+export const DivBox = styled.div`
+    position: relative;
+`
 
 export const Image = styled.div`
     img{

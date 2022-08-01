@@ -5,12 +5,15 @@ import {
     IntroFilter,
     DivFilters,
     Filter,
-    Order } from "../styles/TitleAndFilter";
+    Order,
+    DivTitle } from "../styles/TitleAndFilter";
 
 const TitleAndFilter = () => {
     return (
-        <Div>   
-            <Title>Descubrí todos los modelos</Title>
+        <Div>
+            <DivTitle>
+                <Title>Descubrí todos los modelos</Title>
+            </DivTitle>   
             <DivFilters>             
                 <Filters>
                     <IntroFilter>

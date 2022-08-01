@@ -6,7 +6,8 @@ import {
     Menu,
     ModelosSelected,
     DivModels,
-    PModel} from '../styles/HeaderHome';
+    PModel,
+    DivNavBar} from '../styles/HeaderHome';
   import logo from "../assets/svg/Logo.svg"
   import MenuIcon from "../assets/png/Group.png"
   import { useState } from 'react';
@@ -49,10 +50,12 @@ import {
             
             {
               showNav ?
+              <DivNavBar>
                 <NavBar 
                   toggle = {setShowNav}
                   show = {showNav}
                 />
+              </DivNavBar>
               :
               <Menu>
                 <PModel>Menu</PModel>

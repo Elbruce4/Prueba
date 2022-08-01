@@ -6,7 +6,20 @@ export const Div = styled.div`
     justify-content: start;
     align-items: center;
 
+    @media (max-width: 414px) {
+        max-width: 404px;
+    }
 
+`
+
+export const DivTitle = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    @media (max-width: 414px) {
+        width: 414px;
+        margin-left: 2rem;
+    }
 `
 
 export const Title = styled.h2`

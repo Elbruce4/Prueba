@@ -10,8 +10,9 @@ export const DivHeader = styled.div`
     margin-right: 2rem;
 
     @media (max-width: 414px) {
-        max-width: 390px;
-        justify-content: space-evenly;
+        max-width: 414px;
+        justify-content: start;
+        margin: 1rem ;
     }
 
 `
@@ -22,10 +23,10 @@ export const FirstPartHeader = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+    position: relative;
     @media (max-width: 414px) {
         max-width: 390px;
-        justify-content: space-evenly;
+        justify-content: start;
         margin: 0;
     }
 `
@@ -47,10 +48,11 @@ export const StyledLogo = styled.div`
     width: 2.5rem;
     height: 2.5rem;
   }
-  @media (max-width: 414px) {
-        
-        margin-right: 15rem;
-    }
+`
+
+export const DivNavBar = styled.div`
+    position: relative;
+    right: 80rem;
 `
 
 export const Modelos = styled.div`
