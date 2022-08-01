@@ -32,8 +32,8 @@ const TitleAndFilter = () => {
                     </IntroFilter>
                     <Filter onClick={() => filter("alls")}>Todos</Filter>
                     <Filter onClick={() => filter("onlyCars")}>Autos</Filter>
-                    <Filter>Picks up y Comerciales</Filter>
-                    <Filter>SUVs y crossover</Filter>
+                    <Filter onClick={() => filter("onlyPicks")}>Picks up y Comerciales</Filter>
+                    <Filter onClick={() => filter("onlySuvs")}>SUVs y crossover</Filter>
                 </Filters>
                 <Order>
                     <IntroFilter>
