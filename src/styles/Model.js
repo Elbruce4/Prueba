@@ -56,6 +56,7 @@ export const DetailDivImg = styled.div`
     justify-content: center;
     width: 15rem;
     img {
+        padding: 0.5rem;
         width: 15rem;
         height: 8rem;
         padding: 0.5rem;

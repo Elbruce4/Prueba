@@ -31,34 +31,31 @@ const Model = () => {
     let { modelId } = useParams();
     let [firstInd , setFirstInd] = useState(0);
     let [secondInd , setSecondInd] = useState(3);
+    console.log(data);
 
-    function addImg () {
-        console.log(data);
-        data.model_features.map((obj) => 
-            setImg(imgs => [...imgs,obj])
-        );
-        data.model_highlights.map((obj) => 
-            setImg(imgs => [...imgs, obj])
-        );
-    }
+    useEffect(() => {
+        dispatch(GetOneCar(modelId));   
+    },[])
 
     useEffect(() => {
         
-        dispatch(GetOneCar(modelId));   
         console.log(data);
         setTimeout(() => {
-            addImg();
+                console.log(data);
+                data.model_features.map((obj) => 
+                    setImg(imgs => [...imgs,obj])
+                );
+                data.model_highlights.map((obj) => 
+                    setImg(imgs => [...imgs, obj])
+                );
         }, 1500);
+        console.log(img);
 
-    },[dispatch, modelId]);
+    },[data, modelId]);
 
-    useEffect(() => 
-        () => {
-            console.log("se activa cuando se desmonta");
-            
-        }
-    ,[])
-
+   useEffect(() => {
+    return () => dispatch(CleanCars());
+   },[])
 
 
     return (
@@ -80,26 +77,6 @@ const Model = () => {
                         firstInd === 0 ? setFirstInd(2) : setFirstInd(firstInd - 1);
                         secondInd === 3 ? setSecondInd(5) : setSecondInd(secondInd - 1);
                     }}></FaArrowAltCircleLeft>
-                    {
-                        /* data.model_features ?
-                        data.model_features.map(obj => {
-                            return <DetailDivImg>
-                                        <img src={obj.image} alt="img" />
-                                        <H4>{obj.name}</H4>
-                                        <p>{obj.description}</p>
-                                    </DetailDivImg>
-                        }) : undefined
-                    }
-                    {
-                        data.model_highlights ?
-                        data.model_highlights.map(obj => {
-                            return  <DetailDivImg>
-                                        <img src={obj.image} alt="img" />
-                                        <H4 color="#373737">{obj.title}</H4>
-                                        <p color="#373737">{obj.content.length > 35 ? `${obj.content.slice(26,75)}...` : obj.content.slice(26)}</p>
-                                    </DetailDivImg>
-                        }) : undefined */
-                    }
                     {
                         img !== [] ? img.slice(firstInd, secondInd).map((obj , index) => {
                             return <DetailDivImg key={index}>
