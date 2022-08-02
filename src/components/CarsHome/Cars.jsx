@@ -39,7 +39,7 @@ const Cars = () => {
                             />
                         })
                         : 
-                        <div>
+                        <div style={{"margin-left" : "20rem"}}>
                             <img src={loading} alt="loading..." />
                         </div>
                     }
