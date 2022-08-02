@@ -1,5 +1,5 @@
 import { 
-    Div,
+    DivSort,
     DivParticular } from "../../styles/Sorts";
 import { orderCars } from "../../redux/actions";
 import { useDispatch } from "react-redux/es/exports";
@@ -20,7 +20,7 @@ const Sorts = () => {
     }
 
     return (
-        <Div>
+        <DivSort>
             <DivParticular onClick={() => dispatch(GetAllCars())}>
                 <p>Nada</p>
             </DivParticular>
@@ -36,7 +36,7 @@ const Sorts = () => {
             <div>
                 <p>Mas <strong>viejos</strong> primero</p>   
             </div>
-        </Div>
+        </DivSort>
     )
 }
 

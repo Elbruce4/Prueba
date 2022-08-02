@@ -23,6 +23,7 @@ export const DivTitle = styled.div`
         img{
             width: 20rem;
             height: 20rem;
+            margin-left: 2rem;
         }
     }
 `
@@ -34,7 +35,9 @@ export const RigthSizeTitle = styled.div`
     width: 35rem;
     @media (max-width: 414px) {
         width: 340px;
-        margin: 1rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 3rem;
     }
 `
 
@@ -77,7 +80,9 @@ export const Detail = styled.div`
     @media (max-width: 414px) {
         flex-direction: column;
         width: 340px;
-        margin: 1rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 3rem;
     }
 `
 
