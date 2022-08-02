@@ -60,7 +60,6 @@ import {
               <Menu>
                 <PModel>Menu</PModel>
                 <img src={MenuIcon} alt="menu" onClick={() => {
-                  console.log("va");
                   setShowNav(!showNav)}} />
               </Menu>
             }

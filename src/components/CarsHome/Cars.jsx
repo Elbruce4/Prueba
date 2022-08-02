@@ -12,9 +12,10 @@ const Cars = () => {
     let show = false;
     const dispatch = useDispatch();
     let data = useSelector((obj) => obj.cars);
+    // eslint-disable-next-line no-unused-vars
+    let change = useSelector((obj) => obj.change);
 
     useEffect(() => {
-        console.log("entra al effect");
         dispatch(GetAllCars());
     }, [dispatch]);
 

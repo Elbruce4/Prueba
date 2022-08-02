@@ -41,9 +41,10 @@ export const RigthSizeTitle = styled.div`
 export const DivImg = styled.div`
     display: flex;
     flex-direction: row;
-    margin-left: 12rem;
-    width: 60rem;
+    margin-left: 8rem;
+    width: 70rem;
     justify-content: space-around;
+    align-items: center;
     @media (max-width: 414px) {
         display: none;
     }
@@ -53,10 +54,12 @@ export const DetailDivImg = styled.div`
     display: flex;
     flex-direction: Column;
     justify-content: center;
+    width: 15rem;
     img {
         width: 15rem;
         height: 8rem;
         padding: 0.5rem;
+        border-radius: 20px;
     }
 `
 

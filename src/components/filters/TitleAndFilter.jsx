@@ -6,15 +6,19 @@ import {
     DivFilters,
     Filter,
     Order,
-    DivTitle } from "../styles/TitleAndFilter";
+    DivTitle,
+    MenuDown } from "../../styles/TitleAndFilter";
 import { useDispatch } from "react-redux/es/exports";
-import { useEffect } from "react";
-import { filterCars } from "../redux/actions";
+import { filterCars } from "../../redux/actions";
+import Sorts from "./Sorts";
+import { useState } from "react";
+import openIcon from "../../assets/svg/bottomDown.svg"
+import hideIcon from "../../assets/svg/iconHide.svg"
 
 const TitleAndFilter = () => {
 
     const dispatch = useDispatch();
-
+    let [show , setShow] = useState(false);
     const filter = (type) => {
         console.log("va");
         dispatch(filterCars(type));
@@ -36,8 +40,23 @@ const TitleAndFilter = () => {
                     <Filter onClick={() => filter("onlySuvs")}>SUVs y crossover</Filter>
                 </Filters>
                 <Order>
-                    <IntroFilter>
-                        Ordernar por
+                    <IntroFilter >
+                        <MenuDown>
+                            <p>Ordernar por</p>
+                            {
+                                show ?
+                                <img src={hideIcon} alt="icon" onClick={() => setShow(!show)} />
+                                :
+                                <img src={openIcon} alt="icon" onClick={() => setShow(!show)} />
+                            }
+                            
+                        </MenuDown>
+                        {
+                            show ? 
+                            <Sorts></Sorts>
+                            :
+                            undefined
+                        }
                     </IntroFilter>
                 </Order>
             </DivFilters>

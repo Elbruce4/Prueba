@@ -1,7 +1,7 @@
 import Header from "./HeaderHome";
 import Cars from "./CarsHome/Cars";
 import Footer from "./Footer";
-import TitleAndFilter from "./TitleAndFilter";
+import TitleAndFilter from "./filters/TitleAndFilter";
 
 const Home = () => {
 

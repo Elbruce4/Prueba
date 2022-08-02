@@ -7,9 +7,8 @@ export const DivNav = styled.div`
     width: 25rem;
     height: 37rem;
     background-color: white;
-    border-left: grey solid 0.5px;
-    border-top: grey solid 0.5px;
-    border-bottom: grey solid 0.5px;
+    
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.2);
 `
 
 export const HeaderNav = styled.div`

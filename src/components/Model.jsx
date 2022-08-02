@@ -1,7 +1,8 @@
 import Header from "./HeaderHome";
 import { useParams } from "react-router-dom";
 import { useEffect , useState } from "react";
-import GetOneCar from "../api/GetOneCar";
+import { GetOneCar , CleanCars } from "../redux/actions";
+import { useDispatch , useSelector } from "react-redux/es/exports";
 import Footer from "./Footer";
 import {
     DivTitle,
@@ -18,58 +19,100 @@ import {
 } from "../styles/Model";
 import Img1 from "../assets/png/Bitmap.png"
 import Img2 from "../assets/png/Bitmap2.png"
+import {FaArrowAltCircleRight , FaArrowAltCircleLeft} from "react-icons/fa"
 
 const Model = () => {
 
     var isHome = false;
     let width = window.screen.width;
-    console.log(width);
-    const [data , setData] = useState({});
+    const data = useSelector(obj => obj.oneCar);
+    const [img , setImg] = useState([]);
+    let dispatch = useDispatch();
     let { modelId } = useParams();
+    let [firstInd , setFirstInd] = useState(0);
+    let [secondInd , setSecondInd] = useState(3);
 
-    useEffect(() => {
-        async function getData () {
-            setData(await GetOneCar(modelId));
-        } 
-        getData();
-    },[modelId]);
-
-    useEffect(() => {
+    function addImg () {
         console.log(data);
-    },[data])
+        data.model_features.map((obj) => 
+            setImg(imgs => [...imgs,obj])
+        );
+        data.model_highlights.map((obj) => 
+            setImg(imgs => [...imgs, obj])
+        );
+    }
+
+    useEffect(() => {
+        
+        dispatch(GetOneCar(modelId));   
+        console.log(data);
+        setTimeout(() => {
+            addImg();
+        }, 1500);
+
+    },[dispatch, modelId]);
+
+    useEffect(() => 
+        () => {
+            console.log("se activa cuando se desmonta");
+            
+        }
+    ,[])
+
+
 
     return (
         <Div>
             <Header isHome={isHome}></Header>
             <DivTitle>
-                <img src={data.photo} alt="img" />
+                <img src={ data.photo} alt="img" />
                 <RigthSizeTitle>
                     <H5>{data.name} {data.segment}</H5>
                     <H2>{data.title}</H2>
                     <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe expedita alias repudiandae nobis aperiam esse porro pariatur placeat voluptatum quos!</P>
                 </RigthSizeTitle>
             </DivTitle>
+
             <DivImg>
-                {
-                    data.model_features ?
-                    data.model_features.map(obj => {
-                        return <DetailDivImg>
-                                    <img src={obj.image} alt="img" />
-                                    <H4>{obj.name}</H4>
-                                    <p>{obj.description}</p>
-                                </DetailDivImg>
-                    }) : undefined
-                }
-                {
-                    data.model_highlights ?
-                    data.model_highlights.map(obj => {
-                        return  <DetailDivImg>
-                                    <img src={obj.image} alt="img" />
-                                    <H4 color="#373737">{obj.title}</H4>
-                                    <p color="#373737">{obj.content.length > 35 ? `${obj.content.slice(26,75)}...` : obj.content.slice(26)}</p>
-                                </DetailDivImg>
-                    }) : undefined
-                }
+
+
+                <FaArrowAltCircleLeft onClick={() => {
+                        firstInd === 0 ? setFirstInd(2) : setFirstInd(firstInd - 1);
+                        secondInd === 3 ? setSecondInd(5) : setSecondInd(secondInd - 1);
+                    }}></FaArrowAltCircleLeft>
+                    {
+                        /* data.model_features ?
+                        data.model_features.map(obj => {
+                            return <DetailDivImg>
+                                        <img src={obj.image} alt="img" />
+                                        <H4>{obj.name}</H4>
+                                        <p>{obj.description}</p>
+                                    </DetailDivImg>
+                        }) : undefined
+                    }
+                    {
+                        data.model_highlights ?
+                        data.model_highlights.map(obj => {
+                            return  <DetailDivImg>
+                                        <img src={obj.image} alt="img" />
+                                        <H4 color="#373737">{obj.title}</H4>
+                                        <p color="#373737">{obj.content.length > 35 ? `${obj.content.slice(26,75)}...` : obj.content.slice(26)}</p>
+                                    </DetailDivImg>
+                        }) : undefined */
+                    }
+                    {
+                        img !== [] ? img.slice(firstInd, secondInd).map((obj , index) => {
+                            return <DetailDivImg key={index}>
+                                        <img src={obj.image} alt="img" />
+                                        <H4 color="#373737">{obj.title !== undefined ? obj.title : obj.name}</H4>
+                                        <p>{obj.description !== undefined ? obj.description : obj.content.length > 35 ? `${obj.content.slice(26,75)}...` : obj.content.slice(26)}</p>
+                                    </DetailDivImg>
+                        }) : undefined
+                    }
+                    <FaArrowAltCircleRight onClick={() => {
+                        firstInd === 2 ? setFirstInd(0) : setFirstInd(firstInd + 1);
+                        secondInd === 5 ? setSecondInd(3) : setSecondInd(secondInd + 1);
+                    }}></FaArrowAltCircleRight>
             </DivImg>
             
                 {

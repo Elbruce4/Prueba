@@ -63,12 +63,30 @@ export const Filters = styled.div`
 
 export const Order = styled.div`
     width: 7.5rem;
+    position: relative;
+`
+
+export const MenuDown = styled.div`
+    display: flex;
+    flex-direction: row;
 `
 
 export const IntroFilter = styled.p`
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     color: black;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
+    img {
+        margin-top: 0.1rem;
+        width: 0.7rem;
+        height: 1rem;
+    }
+    p{
+        margin: 0;
+        width: 6rem;
+    }
 `
 
 export const Filter = styled.p`
