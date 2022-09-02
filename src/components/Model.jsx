@@ -20,6 +20,7 @@ import {
 import Img1 from "../assets/png/Bitmap.png"
 import Img2 from "../assets/png/Bitmap2.png"
 import {FaArrowAltCircleRight , FaArrowAltCircleLeft} from "react-icons/fa"
+import { BsFillArrowRightSquareFill , BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 const Model = () => {
 
@@ -71,8 +72,6 @@ const Model = () => {
             </DivTitle>
 
             <DivImg>
-
-
                 <FaArrowAltCircleLeft onClick={() => {
                         firstInd === 0 ? setFirstInd(2) : setFirstInd(firstInd - 1);
                         secondInd === 3 ? setSecondInd(5) : setSecondInd(secondInd - 1);
